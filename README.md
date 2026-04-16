@@ -155,4 +155,8 @@ http://127.0.0.1:5000
 * Password: user
 
 
+<img width="336" height="122" alt="image" src="https://github.com/user-attachments/assets/a59f7afd-4e14-4359-b6d1-cacc4b48022e" />
+
+
+
 
