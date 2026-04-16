@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Return Book</h3>
+
+<form method="POST">
+    <select name="issue_id" class="form-control mb-2">
+        {% for i in issues %}
+        <option value="{{ i.id }}">{{ i.name }}</option>
+        {% endfor %}
+    </select>
+
+    <button class="btn btn-warning">Return</button>
+</form>
+
+{% endblock %}

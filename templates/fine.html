@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Fine: ₹{{ fine }}</h3>
+
+<form method="POST" action="/pay_fine">
+    <input type="hidden" name="issue_id" value="{{ issue_id }}">
+    <input type="checkbox" name="paid"> Fine Paid
+    <br><br>
+    <button class="btn btn-primary">Confirm</button>
+</form>
+
+{% if error %}<p class="text-danger">{{ error }}</p>{% endif %}
+
+{% endblock %}
