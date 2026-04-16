@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Master List of Memberships</h3>
+
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Contact</th>
+<th>Start</th>
+<th>End</th>
+<th>Status</th>
+</tr>
+
+{% for m in memberships %}
+<tr>
+<td>{{m.id}}</td>
+<td>{{m.name}}</td>
+<td>{{m.contact}}</td>
+<td>{{m.start_date}}</td>
+<td>{{m.end_date}}</td>
+<td>{{m.status}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

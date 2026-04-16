@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Update Membership</h3>
+
+<form method="POST">
+
+<select name="id" required>
+{% for m in memberships %}
+<option value="{{m.id}}">
+{{m.name}} ({{m.status}})
+</option>
+{% endfor %}
+</select>
+
+<br><br>
+
+<input type="radio" name="action" value="extend" checked> Extend 6 Months<br>
+<input type="radio" name="action" value="cancel"> Cancel Membership<br>
+
+<br>
+
+<button type="submit">Confirm</button>
+
+</form>
+
+{% endblock %}

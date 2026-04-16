@@ -4,12 +4,15 @@
 <h3>Add Book</h3>
 
 <form method="POST">
-    <input class="form-control mb-2" name="name" placeholder="Book Name">
-    <input class="form-control mb-2" name="author" placeholder="Author">
-    <button class="btn btn-primary">Add</button>
-</form>
 
-{% if error %}<p class="text-danger">{{ error }}</p>{% endif %}
-{% if success %}<p class="text-success">{{ success }}</p>{% endif %}
+Book Name:
+<input type="text" name="name" required><br><br>
+
+Author Name:
+<input type="text" name="author" required><br><br>
+
+<button type="submit">Add Book</button>
+
+</form>
 
 {% endblock %}

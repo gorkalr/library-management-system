@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Active Issues</h3>
+{% for i in issues %}
+<p>{{i.book.name}}</p>
+{% endfor %}
+{% endblock %}

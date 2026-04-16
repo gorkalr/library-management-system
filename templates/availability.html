@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Available Books</h3>
+{% for b in books %}
+<p>{{b.name}} - {{b.available}}</p>
+{% endfor %}
+{% endblock %}

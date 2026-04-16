@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Search Results</h3>
+
+<form method="POST">
+    Enter Book Name:
+    <input type="text" name="name">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Category</th>
+    <th>Available</th>
+</tr>
+
+{% for b in books %}
+<tr>
+    <td>{{b.name}}</td>
+    <td>{{b.author}}</td>
+    <td>{{b.category}}</td>
+    <td>{{b.available}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

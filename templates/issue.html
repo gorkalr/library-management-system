@@ -1,18 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-
-<h3>Issue Book</h3>
-
 <form method="POST">
-    <select name="book_id" class="form-control mb-2">
-        {% for book in books %}
-        <option value="{{ book.id }}">{{ book.name }}</option>
-        {% endfor %}
-    </select>
-
-    <button class="btn btn-success">Issue</button>
+<select name="book">
+{% for b in books %}
+<option value="{{b.id}}">{{b.name}}</option>
+{% endfor %}
+</select>
+<button>Issue</button>
 </form>
-
-{% if success %}<p class="text-success">{{ success }}</p>{% endif %}
-
 {% endblock %}
